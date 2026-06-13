@@ -1,0 +1,27 @@
+{
+  "name": "shiftlink",
+  "version": "1.0.0",
+  "description": "Same-day gig/day-labor matching platform with an AI dispatcher, built for people without a smartphone app, bank account, or permanent address.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node firebase/seed.js"
+  },
+  "keywords": [
+    "gig",
+    "day-labor",
+    "ai",
+    "openai",
+    "firebase"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase-admin": "^12.3.1",
+    "openai": "^4.56.0"
+  }
+}

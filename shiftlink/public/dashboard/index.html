@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShiftLink · Outreach Ops</title>
+    <link rel="stylesheet" href="/shared/styles.css" />
+    <link rel="stylesheet" href="/dashboard/style.css" />
+  </head>
+  <body>
+    <div id="setup-banner" class="setup-banner" hidden>
+      Firebase isn't configured yet — live data is off. Paste your web config into
+      <code>public/shared/firebase.js</code>.
+    </div>
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">◆</span> ShiftLink <span class="tag">Outreach Ops</span>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/worker/">Worker chat</a>
+        <a href="/employer/signup.html">Employer signup</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="panel beacons">
+        <div class="panel-head">
+          <h2>Active Shift Beacons</h2>
+          <span class="muted" id="beacon-count">0 active</span>
+        </div>
+        <div id="beacons" class="beacon-list">
+          <p class="empty">No active shifts. Have a worker text START.</p>
+        </div>
+      </section>
+
+      <section class="panel alerts">
+        <div class="panel-head">
+          <h2>Alerts</h2>
+          <span class="muted" id="alert-count">0</span>
+        </div>
+        <div id="alerts" class="alert-list">
+          <p class="empty">All clear.</p>
+        </div>
+      </section>
+
+      <section class="panel jobs">
+        <div class="panel-head"><h2>Jobs</h2></div>
+        <div id="jobs" class="job-list"></div>
+      </section>
+
+      <section class="panel employers">
+        <div class="panel-head"><h2>Employer Trust</h2></div>
+        <div id="employers" class="employer-list"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/dashboard/app.js"></script>
+  </body>
+</html>

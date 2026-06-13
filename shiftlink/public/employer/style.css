@@ -1,0 +1,140 @@
+body {
+  background: var(--ops-bg);
+  color: var(--ops-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 480px;
+  max-width: 100%;
+  background: var(--ops-panel);
+  border: 1px solid var(--ops-border);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.home {
+  color: var(--ops-muted);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 14px 0 8px;
+}
+
+.lead {
+  color: var(--ops-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input:not([type]),
+input[name] {
+  background: #0f141c;
+  border: 1px solid var(--ops-border);
+  border-radius: 10px;
+  padding: 11px 13px;
+  color: var(--ops-text);
+  font-size: 15px;
+  outline: none;
+}
+input:focus {
+  border-color: var(--ios-blue);
+}
+
+small {
+  font-weight: 400;
+  color: var(--ops-muted);
+  font-size: 12px;
+}
+
+.liability {
+  background: #0f141c;
+  border: 1px solid var(--ops-border);
+  border-radius: 10px;
+  padding: 12px;
+}
+.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--ops-muted);
+}
+.check input {
+  width: 18px;
+  height: 18px;
+}
+
+#submit {
+  background: var(--ios-blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+#submit:disabled {
+  opacity: 0.6;
+}
+
+.result {
+  margin-top: 8px;
+  text-align: center;
+}
+.badge-pending {
+  display: inline-block;
+  background: #3b2f0b;
+  color: #f5d97a;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.result p {
+  color: var(--ops-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.result a {
+  color: var(--ios-blue);
+}
+.escrow {
+  font-size: 13px;
+  border-top: 1px solid var(--ops-border);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+.setup-note {
+  background: #3b2f0b;
+  color: #f5d97a;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}

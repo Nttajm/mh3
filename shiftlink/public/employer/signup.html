@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShiftLink · Employer Sign-up</title>
+    <link rel="stylesheet" href="/shared/styles.css" />
+    <link rel="stylesheet" href="/employer/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <a class="home" href="/">‹ Home</a>
+      <h1>Post same-day work</h1>
+      <p class="lead">
+        Find verified, rated workers without the vetting hassle. New accounts start in review and
+        graduate to <b>✓ Verified Employer</b> after a few successful jobs.
+      </p>
+
+      <form id="form">
+        <label>
+          Business name
+          <input name="name" required placeholder="ABC Logistics" />
+        </label>
+        <label>
+          Phone number
+          <input name="phone" required placeholder="+1 510 555 0123" />
+          <small>OTP verification simulated for the demo.</small>
+        </label>
+        <label>
+          Business address
+          <input name="address" required placeholder="500 Industrial Pkwy, Milpitas, CA" />
+          <small>Cross-checked against Google Places in production.</small>
+        </label>
+
+        <div class="liability">
+          <label class="check">
+            <input type="checkbox" name="agree" required />
+            I AGREE to the liability & workers'-comp acknowledgment.
+          </label>
+        </div>
+
+        <button type="submit" id="submit">Create account</button>
+      </form>
+
+      <div id="result" class="result" hidden>
+        <div class="badge-pending">Pending Verification</div>
+        <p>
+          Your account was created and sent to a partner org for review. Once approved on the
+          <a href="/dashboard/">outreach dashboard</a>, you'll be able to post jobs freely.
+        </p>
+        <p class="escrow">Funds-held escrow (simulated) will guarantee worker pay before each job goes live.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/employer/app.js"></script>
+  </body>
+</html>

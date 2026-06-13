@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShiftLink</title>
+    <link rel="stylesheet" href="/shared/styles.css" />
+    <link rel="stylesheet" href="/worker/style.css" />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="phone">
+        <div class="notch"></div>
+        <header class="chat-header">
+          <a class="back" href="/">‹</a>
+          <div class="contact">
+            <div class="avatar">SL</div>
+            <div>
+              <div class="name">ShiftLink</div>
+              <div class="status">AI counselor · online</div>
+            </div>
+          </div>
+        </header>
+
+        <main id="messages" class="messages"></main>
+
+        <footer class="composer">
+          <input
+            id="input"
+            type="text"
+            placeholder="Text ShiftLink…"
+            autocomplete="off"
+          />
+          <button id="send" aria-label="Send">↑</button>
+        </footer>
+      </div>
+      <p class="hint">
+        Try: <em>"free today near downtown, can lift heavy stuff, need $15+/hr"</em> ·
+        then <b>START</b>, then <b>DONE</b>
+      </p>
+    </div>
+
+    <script type="module" src="/worker/app.js"></script>
+  </body>
+</html>

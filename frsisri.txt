@@ -1,0 +1,38 @@
+What's built
+A complete vanilla HTML/CSS/JS app served by a Node/Express server, with OpenAI function-calling as the AI dispatcher and Firebase Firestore for real-time sync.
+
+AI dispatcher (lib/openai.js + lib/tools.js) — real OpenAI function calling with 6 tools: search_jobs, accept_job, check_in, check_out, submit_rating, trigger_sos. Key stays server-side.
+Worker chat (public/worker/) — iMessage-style phone frame, typing indicator, live pay-stub bubble.
+Outreach dashboard (public/dashboard/) — Active Shift Beacons with a countdown ring that shifts teal → amber → red, alerts feed, jobs board, employer trust scores, and a flagged employer whose jobs are hidden from the worker feed. Live via Firestore listeners.
+Employer signup (public/employer/) — Pending → Verified flow with an Approve button on the dashboard.
+Pay stub page (public/paystub.html) — shareable proof-of-income record.
+Overdue scanner in server.js flips active shifts to overdue and raises an alert (the safety-net demo moment).
+Seed script (firebase/seed.js) with demo employers (one flagged, one pending), jobs, and worker w1.
+What YOU need to do now (API keys)
+Everything is coded; it just needs your credentials. All steps are in shiftlink/README.md, summarized here:
+
+1. OpenAI key
+
+Get one at platform.openai.com/api-keys
+cp .env.example .env, then set OPENAI_API_KEY=sk-... in shiftlink/.env
+2. Firebase web config (frontend)
+
+Firebase Console → Project Settings → General → Your apps → Web app
+Paste the config values into shiftlink/public/shared/firebase.js (replace the PASTE_... placeholders)
+3. Firebase service account (server)
+
+Firebase Console → Project Settings → Service accounts → Generate new private key
+Save the JSON as shiftlink/firebase/serviceAccount.json
+4. Enable Firestore
+
+Firebase Console → Build → Firestore Database → Create database (test mode is fine for the hackathon)
+Then run:
+
+cd shiftlink
+npm run seed   # one time — loads demo data
+npm start      # opens http://localhost:3000
+Open /worker/ and /dashboard/ side by side for the demo.
+
+Two things to note: the server won't start until serviceAccount.json exists (it exits with a clear message), and DEMO_SHIFT_MINUTES in .env (default 2) controls how fast a missed check-out turns a beacon red — handy for timing the live safety-escalation demo.
+
+A couple of small decisions I made on my own: model defaults to gpt-4o-mini (override with OPENAI_MODEL), the hidden SOS keyword is REDBIRD, and the worker is hardcoded to w1 for the demo. Let me know if you'd like any of those changed, or want me to add the no-show backup pool / crew matching / weather alerts from the spec's "extra build time" section.

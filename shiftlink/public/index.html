@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShiftLink — Same-day work on any phone</title>
+    <link rel="stylesheet" href="/shared/styles.css" />
+    <style>
+      body {
+        background: radial-gradient(1200px 600px at 50% -10%, #1b2a4a 0%, #0d1117 60%);
+        color: #e6edf3;
+        min-height: 100vh;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 64px 24px 80px;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--teal);
+        border: 1px solid var(--ops-border);
+        border-radius: 999px;
+        padding: 6px 14px;
+        margin-bottom: 24px;
+      }
+      h1 {
+        font-size: 52px;
+        line-height: 1.05;
+        margin: 0 0 16px;
+        letter-spacing: -0.02em;
+      }
+      .sub {
+        font-size: 20px;
+        color: var(--ops-muted);
+        max-width: 640px;
+        line-height: 1.5;
+        margin: 0 0 36px;
+      }
+      .pitch {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin: 48px 0;
+      }
+      .card {
+        background: var(--ops-panel);
+        border: 1px solid var(--ops-border);
+        border-radius: 16px;
+        padding: 22px;
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 17px;
+      }
+      .card p {
+        margin: 0;
+        color: var(--ops-muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .cta {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 14px 24px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+      }
+      .btn-primary {
+        background: var(--ios-blue);
+        color: white;
+      }
+      .btn-ghost {
+        background: transparent;
+        border-color: var(--ops-border);
+        color: #e6edf3;
+      }
+      .foot {
+        margin-top: 56px;
+        color: var(--ops-muted);
+        font-size: 13px;
+      }
+      @media (max-width: 720px) {
+        h1 { font-size: 38px; }
+        .pitch { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <span class="badge">Milpitas Hacks 2</span>
+      <h1>An AI employment counselor that works on any phone.</h1>
+      <p class="sub">
+        No app. No address. No resume required. ShiftLink matches people to same-day local work
+        through a simple text conversation — and keeps a safety net running quietly behind it.
+      </p>
+
+      <div class="cta">
+        <a class="btn btn-primary" href="/worker/">Try the worker chat →</a>
+        <a class="btn btn-ghost" href="/dashboard/">Open outreach dashboard</a>
+        <a class="btn btn-ghost" href="/employer/signup.html">Employer sign-up</a>
+      </div>
+
+      <div class="pitch">
+        <div class="card">
+          <h3>Talk, don't fill out forms</h3>
+          <p>Workers text an AI counselor in plain language. It finds a real job, confirms the rate, and locks it in.</p>
+        </div>
+        <div class="card">
+          <h3>A safety net that watches</h3>
+          <p>Check-in / check-out beacons and a hidden SOS keyword alert outreach staff if something goes wrong.</p>
+        </div>
+        <div class="card">
+          <h3>Builds toward housing</h3>
+          <p>Every finished job creates a digital pay stub — proof of income that day-labor work usually never leaves.</p>
+        </div>
+      </div>
+
+      <p class="foot">
+        Same-day local work. No address or bank account needed. A labor-market tool that removes the exact
+        barriers this population faces — without singling anyone out.
+      </p>
+    </div>
+  </body>
+</html>
